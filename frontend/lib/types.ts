@@ -39,6 +39,7 @@ export interface ReportSections {
     summary: string;
     findings: string[];
     sources: string[];
+    technology_readiness?: string;
   };
   market_analysis: {
     market_size: string;
