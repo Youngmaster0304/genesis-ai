@@ -40,57 +40,74 @@ export interface ReportSections {
     findings: string[];
     sources: string[];
     technology_readiness?: string;
+    open_problems?: string[];
+    [key: string]: any;
   };
   market_analysis: {
     market_size: string;
     trends: string[];
+    [key: string]: any;
   };
   competitor_analysis: Array<{
     name: string;
     strength: string;
     weakness: string;
+    [key: string]: any;
   }>;
   patent_landscape: {
     status: string;
     existing_patents: string[];
+    novelty_gaps?: string[];
+    [key: string]: any;
   };
   novelty_score_breakdown: {
     breakdown: string;
     gaps: string[];
+    [key: string]: any;
   };
   technical_architecture: {
     architecture_summary: string;
-    diagram_svg_raw: string;
+    diagram_svg_raw?: string;
+    diagram_nodes?: string[];
+    [key: string]: any;
   };
   technology_stack: Array<{
     name: string;
     role: string;
+    [key: string]: any;
   }>;
   mvp_roadmap: Array<{
     phase: string;
     duration: string;
     tasks: string[];
+    [key: string]: any;
   }>;
   business_model: {
     description: string;
     tiers: string[];
+    [key: string]: any;
   };
   risk_analysis: Array<{
     risk: string;
     mitigation: string;
+    [key: string]: any;
   }>;
   gtm_strategy: {
     channels: string[];
-    timeline: string;
+    timeline?: string;
+    [key: string]: any;
   };
   investor_pitch: {
     hook: string;
     slides_outline: string[];
+    [key: string]: any;
   };
   development_timeline: Array<{
     milestone: string;
     week: string;
+    [key: string]: any;
   }>;
+  [key: string]: any;
 }
 
 export interface GenesisReport {
