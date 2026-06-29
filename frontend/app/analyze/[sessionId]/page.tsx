@@ -46,7 +46,8 @@ export default function LiveDashboardPage() {
     setSessionId(sessionId);
 
     // Initialize EventSource
-    const eventSource = new EventSource(`http://127.0.0.1:8000/api/session/${sessionId}/stream`);
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8000';
+    const eventSource = new EventSource(`${apiUrl}/api/session/${sessionId}/stream`);
     sseRef.current = eventSource;
 
     eventSource.onmessage = (event) => {
