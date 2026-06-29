@@ -380,7 +380,7 @@ export default function ReportPage() {
     const style = document.createElement('style');
     style.textContent = `@media print { .no-print { display:none!important; } }`;
     document.head.appendChild(style);
-    return () => document.head.removeChild(style);
+    return () => { document.head.removeChild(style); };
   }, []);
 
   useEffect(() => {
