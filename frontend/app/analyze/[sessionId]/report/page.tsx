@@ -650,8 +650,8 @@ export default function ReportPage() {
                   <Card>
                     <div className="text-[10px] font-mono font-bold text-slate-400 uppercase tracking-widest mb-3">Claimable White-Space Opportunities</div>
                     <div className="grid md:grid-cols-2 gap-3">
-                      {patent.novelty_gaps.map((g: string, i: number) => (
-                        <div key={i} className="flex gap-2 p-3 rounded bg-emerald-950/10 border border-emerald-500/15">
+                      {(patent.novelty_gaps || []).map((g: string, i: number) => (
+                        <div key={i} className="flex gap-2 p-3 rounded bg-emerald-950/10 border border-emerald-900/30">
                           <span className="text-emerald-400 text-sm">✓</span>
                           <p className="text-xs text-slate-300">{g}</p>
                         </div>
