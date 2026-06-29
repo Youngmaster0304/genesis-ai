@@ -27,7 +27,7 @@ app = FastAPI(title="Genesis AI - Orchestrator API")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # Next.js frontend port
-    allow_credentials=True,
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
