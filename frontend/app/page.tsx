@@ -32,6 +32,37 @@ export default function Home() {
         <WorkflowAnimation />
       </section>
 
+      {/* Demo Video Section */}
+      <section id="demo" className="py-24 bg-[#080B14] relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-indigo-950/10 via-transparent to-transparent pointer-events-none" />
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-indigo-500/20 bg-indigo-950/30 text-indigo-400 text-xs font-mono font-semibold mb-4">
+              ▶ LIVE DEMO
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              See Genesis AI in Action
+            </h2>
+            <p className="text-slate-400 text-sm max-w-xl mx-auto">
+              Watch how 6 autonomous AI agents collaborate in real-time to transform a raw idea into a complete VC-ready R&amp;D package in under 60 seconds.
+            </p>
+          </div>
+          <div className="relative rounded-2xl overflow-hidden border border-indigo-500/20 shadow-2xl shadow-indigo-950/50 bg-[#0b0f1b]">
+            {/* Glow effect */}
+            <div className="absolute -inset-1 bg-gradient-to-r from-indigo-600/20 via-purple-600/20 to-pink-600/20 rounded-2xl blur-xl pointer-events-none" />
+            <div className="relative aspect-video">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/bbMiV5o05_w?autoplay=0&rel=0&modestbranding=1"
+                title="Genesis AI Demo"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Feature section */}
       <section id="features">
         <FeatureGrid />
